@@ -1,0 +1,55 @@
+<!-- //interpolation
+<h1 class="red">{{title}}</h1>
+
+<button (click)="listenclick()" class="btn btn-primary">click me </button>
+
+<p *ngIf="isvisible">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ducimus ut soluta libero, quibusdam cum ex quisquam dolore. Dolor magnam veniam cupiditate non cum officia voluptates eligendi ipsum consequuntur possimus?</p>
+
+<ul>
+  <li *ngFor="let item of value">
+    {{item}}
+  </li>
+</ul>
+
+<input type="text"[(ngModel)]="inputvalue">
+
+{{inputvalue}}
+<app-header></app-header>
+<app-footer></app-footer> -->
+
+
+<!-- app.component.html -->
+<div class="login-container">
+  <div class="login-card">
+    <h3 class="login-title">Login</h3>
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="loginData.email"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="loginData.password"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+</div>
+
+
